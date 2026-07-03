@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --color-tvk-red: #c41e3a;
+  --color-tvk-red-dark: #9a1830;
+  --color-tvk-gold: #ffd700;
+  --color-tvk-gold-dark: #d4af37;
+  --color-tvk-black: #1a1a1a;
+  --font-sans: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900 antialiased;
+  font-family: var(--font-sans);
+}

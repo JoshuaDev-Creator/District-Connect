@@ -16,17 +16,17 @@ export const VIJAY_LEADER: Leader = {
   name: 'Thalapathy Vijay',
   nameTa: 'தளபதி விஜய்',
   role: 'Founder & President, TVK',
-  roleTa: 'தமிழக வெற்றிக் கழகம் — நிறுவனர்',
-  image: './images/vijay-cm.svg',
+  roleTa: 'தமிழக வெற்றிக் கழகம் — நிறுவனர் & தலைவர்',
+  image: './images/vijay-cm.jpg',
 };
 
 export const DISTRICT_LEADER: Leader = {
   id: 'district-leader',
-  name: 'District Secretary',
-  nameTa: 'மாவட்ட செயலாளர்',
-  role: `TVK ${DISTRICT_NAME} Leader`,
-  roleTa: `தமிழக வெற்றிக் கழகம் — ${DISTRICT_NAME_TA} தலைவர்`,
-  image: './images/district-leader.svg',
+  name: 'S. Maria John',
+  nameTa: 'எஸ். மரியா ஜான்',
+  role: `TVK ${DISTRICT_NAME} District Secretary`,
+  roleTa: `தமிழக வெற்றிக் கழகம் — ${DISTRICT_NAME_TA} மாவட்ட செயலாளர்`,
+  image: './images/district-leader.jpg',
 };
 
 export const KOLGAI_LEADERS: Leader[] = [

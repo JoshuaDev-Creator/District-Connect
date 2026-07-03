@@ -81,20 +81,19 @@ export function DistrictLeaderSection() {
           />
           <div className="text-center sm:text-left">
             <p className="text-tvk-red text-sm font-semibold uppercase tracking-wide">
-              {DISTRICT_NAME} Representative
+              {DISTRICT_NAME} District Secretary
             </p>
             <h3 className="text-xl sm:text-2xl font-bold text-tvk-black mt-1">
-              TVK {DISTRICT_NAME} Leader
+              {DISTRICT_LEADER.name}
             </h3>
-            <p className="text-tvk-red font-medium">
-              தமிழக வெற்றிக் கழகம் — {DISTRICT_NAME_TA} தலைவர்
-            </p>
+            <p className="text-tvk-red font-medium">{DISTRICT_LEADER.nameTa}</p>
+            <p className="text-gray-500 text-sm">{DISTRICT_LEADER.role}</p>
             <p className="text-gray-600 mt-3 text-sm leading-relaxed">
-              Reach out to your TVK {DISTRICT_NAME} leader for local grievances, community support, and party initiatives in the Palayamkottai area.
+              Reach out to {DISTRICT_LEADER.name}, TVK {DISTRICT_NAME} District Secretary, for local grievances, community support, and party initiatives.
               Register your house and submit complaints through this portal — we are here to serve every family in {DISTRICT_NAME}.
             </p>
             <p className="text-gray-500 text-sm mt-2">
-              பாலையங்கோட்டை மாவட்ட தலைவர் மூலம் உள்ளூர் பிரச்சினைகள், சமூக ஆதரவு மற்றும் கழக முயற்சிகளை அணுகலாம்.
+              {DISTRICT_LEADER.roleTa} — பாலையங்கோட்டை மாவட்டத்திற்கான உங்கள் TVK பிரதிநிதி.
             </p>
           </div>
         </div>

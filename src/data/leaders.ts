@@ -1,3 +1,5 @@
+import { DISTRICT_NAME, DISTRICT_NAME_TA } from './district';
+
 export interface Leader {
   id: string;
   name: string;
@@ -22,8 +24,8 @@ export const DISTRICT_LEADER: Leader = {
   id: 'district-leader',
   name: 'District Secretary',
   nameTa: 'மாவட்ட செயலாளர்',
-  role: 'TVK District Leader',
-  roleTa: 'தமிழக வெற்றிக் கழகம் — மாவட்ட தலைவர்',
+  role: `TVK ${DISTRICT_NAME} Leader`,
+  roleTa: `தமிழக வெற்றிக் கழகம் — ${DISTRICT_NAME_TA} தலைவர்`,
   image: './images/district-leader.svg',
 };
 

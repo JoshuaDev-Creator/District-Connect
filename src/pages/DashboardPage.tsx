@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Button, Card, Alert } from '../components/FormFields';
 import { getActiveHouse, getComplaintsByHouse } from '../lib/storage';
 import { COMPLAINT_CATEGORIES, STATUS_LABELS, type Complaint } from '../types';
+import { DISTRICT_NAME, DISTRICT_NAME_TA } from '../data/district';
 
 function StatusBadge({ status }: { status: Complaint['status'] }) {
   const colors: Record<Complaint['status'], string> = {
@@ -110,9 +111,9 @@ export default function DashboardPage() {
     <div className="space-y-6">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
-          <h2 className="text-2xl font-bold text-tvk-black">My Complaints</h2>
+          <h2 className="text-2xl font-bold text-tvk-black">My Complaints — {DISTRICT_NAME}</h2>
           <p className="text-gray-600 mt-1">
-            என் புகார்கள் — {activeHouse.headOfFamily}, Ward {activeHouse.ward}
+            என் புகார்கள் — {DISTRICT_NAME_TA} — {activeHouse.headOfFamily}, Ward {activeHouse.ward}
           </p>
         </div>
         <Link to="/complaint">

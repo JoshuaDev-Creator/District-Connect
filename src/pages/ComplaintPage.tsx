@@ -13,6 +13,7 @@ import {
   type ComplaintAttachment,
   type ComplaintCategory,
 } from '../types';
+import { DISTRICT_NAME, DISTRICT_NAME_TA } from '../data/district';
 
 interface FormErrors {
   [key: string]: string;
@@ -134,8 +135,10 @@ export default function ComplaintPage() {
   return (
     <div className="max-w-2xl mx-auto space-y-6">
       <div>
-        <h2 className="text-2xl font-bold text-tvk-black">Submit Complaint</h2>
-        <p className="text-gray-600 mt-1">புகார் சமர்ப்பிப்பு — Filing on behalf of {activeHouse.headOfFamily}</p>
+        <h2 className="text-2xl font-bold text-tvk-black">Submit Complaint — {DISTRICT_NAME}</h2>
+        <p className="text-gray-600 mt-1">
+          புகார் சமர்ப்பிப்பு — {DISTRICT_NAME_TA} — Filing on behalf of {activeHouse.headOfFamily}
+        </p>
       </div>
 
       {success && (

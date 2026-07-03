@@ -1,18 +1,9 @@
 import { useState, type FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { TextField, SelectField, Button, Card, Alert } from '../components/FormFields';
+import { TextField, Button, Card, Alert } from '../components/FormFields';
 import { generateId, getHouses, saveHouse, setActiveHouseId } from '../lib/storage';
 import type { House } from '../types';
-
-const TAMIL_NADU_DISTRICTS = [
-  'Ariyalur', 'Chengalpattu', 'Chennai', 'Coimbatore', 'Cuddalore', 'Dharmapuri',
-  'Dindigul', 'Erode', 'Kallakurichi', 'Kanchipuram', 'Kanyakumari', 'Karur',
-  'Krishnagiri', 'Madurai', 'Mayiladuthurai', 'Nagapattinam', 'Namakkal', 'Nilgiris',
-  'Perambalur', 'Pudukkottai', 'Ramanathapuram', 'Ranipet', 'Salem', 'Sivaganga',
-  'Tenkasi', 'Thanjavur', 'Theni', 'Thoothukudi', 'Tiruchirappalli', 'Tirunelveli',
-  'Tirupathur', 'Tiruppur', 'Tiruvallur', 'Tiruvannamalai', 'Tiruvarur', 'Vellore',
-  'Viluppuram', 'Virudhunagar',
-].map((d) => ({ value: d, label: d }));
+import { ADMIN_DISTRICT, DISTRICT_NAME, DISTRICT_NAME_TA } from '../data/district';
 
 interface FormErrors {
   [key: string]: string;
@@ -27,8 +18,8 @@ export default function RegisterPage() {
     houseNumber: '',
     streetName: '',
     ward: '',
-    village: '',
-    district: '',
+    village: DISTRICT_NAME,
+    district: ADMIN_DISTRICT,
     pincode: '',
     headOfFamily: '',
     phone: '',
@@ -95,8 +86,10 @@ export default function RegisterPage() {
   return (
     <div className="max-w-2xl mx-auto space-y-6">
       <div>
-        <h2 className="text-2xl font-bold text-tvk-black">House Registration</h2>
-        <p className="text-gray-600 mt-1">வீடு பதிவு — Register your household with TVK district office</p>
+        <h2 className="text-2xl font-bold text-tvk-black">House Registration — {DISTRICT_NAME}</h2>
+        <p className="text-gray-600 mt-1">
+          வீடு பதிவு — Register your household with TVK {DISTRICT_NAME_TA} office
+        </p>
       </div>
 
       {success && (
@@ -169,15 +162,17 @@ export default function RegisterPage() {
               onChange={(e) => updateField('village', e.target.value)}
               error={errors.village}
               required
+              readOnly
+              className="bg-gray-50"
             />
-            <SelectField
+            <TextField
               label="District"
               labelTa="மாவட்டம்"
               value={form.district}
-              onChange={(e) => updateField('district', e.target.value)}
               error={errors.district}
-              options={TAMIL_NADU_DISTRICTS}
               required
+              readOnly
+              className="bg-gray-50"
             />
             <TextField
               label="Pincode"

@@ -6,12 +6,13 @@ import {
   DistrictLeaderSection,
 } from '../components/LeaderSections';
 import { getActiveHouse, getComplaintsByHouse } from '../lib/storage';
+import { DISTRICT_NAME, DISTRICT_NAME_TA } from '../data/district';
 
 const features = [
   {
     title: 'Register Your House',
     titleTa: 'உங்கள் வீட்டை பதிவு செய்யுங்கள்',
-    description: 'Every household in the district can register with TVK to stay connected with local party representatives.',
+    description: `Every household in ${DISTRICT_NAME} can register with TVK to stay connected with local party representatives.`,
     icon: '🏠',
     link: '/register',
     linkText: 'Register Now',
@@ -40,6 +41,12 @@ export default function HomePage() {
 
   return (
     <div className="space-y-10">
+      <div className="text-center">
+        <span className="inline-block bg-tvk-red/10 text-tvk-red px-4 py-1.5 rounded-full text-sm font-semibold border border-tvk-red/20">
+          {DISTRICT_NAME} — {DISTRICT_NAME_TA} | Tirunelveli
+        </span>
+      </div>
+
       <HeroLeaderSection />
 
       <section className="text-center space-y-4">

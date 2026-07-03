@@ -1,6 +1,7 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { getActiveHouse } from '../lib/storage';
 import { PartyLogo } from './PartyLogo';
+import { APP_TITLE, APP_TITLE_TA, APP_TAGLINE, DISTRICT_NAME } from '../data/district';
 
 const navItems = [
   { path: '/', label: 'Home', labelTa: 'முகப்பு' },
@@ -22,9 +23,9 @@ export default function Layout() {
               <PartyLogo className="w-14 h-14 border-2 border-tvk-gold" />
               <div>
                 <h1 className="text-xl font-bold tracking-wide group-hover:text-tvk-gold transition-colors">
-                  TVK District Connect
+                  {APP_TITLE}
                 </h1>
-                <p className="text-sm text-red-100">தமிழக வெற்றிக் கழகம் — மாவட்ட இணைப்பு</p>
+                <p className="text-sm text-red-100">{APP_TITLE_TA}</p>
               </div>
             </Link>
             {activeHouse && (
@@ -68,7 +69,8 @@ export default function Layout() {
 
       <footer className="bg-tvk-black text-gray-400 text-center py-6 text-sm">
         <p>© {new Date().getFullYear()} TVK — Tamizhaga Vettri Kazhagam</p>
-        <p className="mt-1">Serving every household in our district</p>
+        <p className="mt-1">{APP_TAGLINE}</p>
+        <p className="text-xs mt-0.5 text-gray-500">{DISTRICT_NAME} — Tirunelveli</p>
       </footer>
     </div>
   );

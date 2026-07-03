@@ -1,4 +1,5 @@
-import { KOLGAI_BANNER, KOLGAI_LEADERS, DISTRICT_LEADER, VIJAY_LEADER } from '../data/leaders';
+import { DISTRICT_LEADER, VIJAY_LEADER, KOLGAI_BANNER, KOLGAI_LEADERS } from '../data/leaders';
+import { DISTRICT_NAME, DISTRICT_NAME_TA } from '../data/district';
 import { LeaderCard, LeaderImage } from './LeaderImage';
 import { Card } from './FormFields';
 
@@ -9,13 +10,13 @@ export function HeroLeaderSection() {
       <div className="relative grid md:grid-cols-2 gap-6 p-6 sm:p-8 items-center">
         <div className="order-2 md:order-1 space-y-4 text-center md:text-left">
           <p className="text-tvk-gold font-semibold text-sm uppercase tracking-wider">
-            தமிழக வெற்றிக் கழகம்
+            தமிழக வெற்றிக் கழகம் — {DISTRICT_NAME_TA}
           </p>
           <h2 className="text-2xl sm:text-3xl font-bold leading-tight">
             Your Voice, Our Priority
           </h2>
           <p className="text-red-100 text-sm sm:text-base">
-            உங்கள் குரல், எங்கள் முன்னுரிமை — Every household in our district can register and submit complaints directly to TVK.
+            உங்கள் குரல், எங்கள் முன்னுரிமை — Every household in {DISTRICT_NAME} can register and submit complaints directly to TVK.
           </p>
           <div className="pt-2">
             <p className="text-tvk-gold font-medium text-lg">{VIJAY_LEADER.name}</p>
@@ -79,15 +80,21 @@ export function DistrictLeaderSection() {
             rounded="full"
           />
           <div className="text-center sm:text-left">
-            <p className="text-tvk-red text-sm font-semibold uppercase tracking-wide">Your District Representative</p>
-            <h3 className="text-xl sm:text-2xl font-bold text-tvk-black mt-1">{DISTRICT_LEADER.role}</h3>
-            <p className="text-tvk-red font-medium">{DISTRICT_LEADER.roleTa}</p>
+            <p className="text-tvk-red text-sm font-semibold uppercase tracking-wide">
+              {DISTRICT_NAME} Representative
+            </p>
+            <h3 className="text-xl sm:text-2xl font-bold text-tvk-black mt-1">
+              TVK {DISTRICT_NAME} Leader
+            </h3>
+            <p className="text-tvk-red font-medium">
+              தமிழக வெற்றிக் கழகம் — {DISTRICT_NAME_TA} தலைவர்
+            </p>
             <p className="text-gray-600 mt-3 text-sm leading-relaxed">
-              Reach out to your TVK district leader for local grievances, community support, and party initiatives in your area.
-              Register your house and submit complaints through this portal — we are here to serve every family.
+              Reach out to your TVK {DISTRICT_NAME} leader for local grievances, community support, and party initiatives in the Palayamkottai area.
+              Register your house and submit complaints through this portal — we are here to serve every family in {DISTRICT_NAME}.
             </p>
             <p className="text-gray-500 text-sm mt-2">
-              உங்கள் மாவட்ட தலைவர் மூலம் உள்ளூர் பிரச்சினைகள், சமூக ஆதரவு மற்றும் கழக முயற்சிகளை அணுகலாம்.
+              பாலையங்கோட்டை மாவட்ட தலைவர் மூலம் உள்ளூர் பிரச்சினைகள், சமூக ஆதரவு மற்றும் கழக முயற்சிகளை அணுகலாம்.
             </p>
           </div>
         </div>

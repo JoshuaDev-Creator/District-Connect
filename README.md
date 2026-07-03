@@ -1,6 +1,6 @@
-# District Connect — TVK Political Party Portal
+# TVK Palayamkottai Connect
 
-A React web application for **Tamizhaga Vettri Kazhagam (TVK)** district offices. Every household can register and submit complaints with photo/document uploads.
+A React web application for **Tamizhaga Vettri Kazhagam (TVK)** — **Palayamkottai** (பாலையங்கோட்டை) district office. Every household in Palayamkottai can register and submit complaints with photo/document uploads.
 
 ## Features
 

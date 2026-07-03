@@ -36,6 +36,14 @@ npm run preview
 
 Open [http://localhost:5173](http://localhost:5173) in your browser.
 
+## Live Site
+
+**One-time setup required** — see [ENABLE-LIVE-SITE.md](ENABLE-LIVE-SITE.md)
+
+After enabling GitHub Pages, your site will be at:
+
+**https://joshuadev-creator.github.io/District-Connect/**
+
 ## Pages
 
 | Route | Description |

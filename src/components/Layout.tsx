@@ -1,5 +1,6 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { getActiveHouse } from '../lib/storage';
+import { PartyLogo } from './PartyLogo';
 
 const navItems = [
   { path: '/', label: 'Home', labelTa: 'முகப்பு' },
@@ -18,12 +19,12 @@ export default function Layout() {
         <div className="max-w-5xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between gap-4">
             <Link to="/" className="flex items-center gap-3 group">
-              <img src="/tvk-logo.svg" alt="TVK Logo" className="w-12 h-12 rounded-full" />
+              <PartyLogo className="w-14 h-14 border-2 border-tvk-gold" />
               <div>
                 <h1 className="text-xl font-bold tracking-wide group-hover:text-tvk-gold transition-colors">
                   TVK District Connect
                 </h1>
-                <p className="text-sm text-red-100">தமிழக வெற்றி கழகம் — மாவட்ட இணைப்பு</p>
+                <p className="text-sm text-red-100">தமிழக வெற்றிக் கழகம் — மாவட்ட இணைப்பு</p>
               </div>
             </Link>
             {activeHouse && (

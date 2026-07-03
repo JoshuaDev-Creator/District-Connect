@@ -1,5 +1,10 @@
 import { Link } from 'react-router-dom';
 import { Button, Card } from '../components/FormFields';
+import {
+  HeroLeaderSection,
+  KolgaiLeadersSection,
+  DistrictLeaderSection,
+} from '../components/LeaderSections';
 import { getActiveHouse, getComplaintsByHouse } from '../lib/storage';
 
 const features = [
@@ -34,19 +39,12 @@ export default function HomePage() {
   const complaintCount = activeHouse ? getComplaintsByHouse(activeHouse.id).length : 0;
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-10">
+      <HeroLeaderSection />
+
       <section className="text-center space-y-4">
-        <div className="inline-block bg-tvk-red/10 text-tvk-red px-4 py-1 rounded-full text-sm font-medium">
-          Tamizhaga Vettri Kazhagam — District Portal
-        </div>
-        <h2 className="text-3xl sm:text-4xl font-bold text-tvk-black">
-          Your Voice, Our Priority
-        </h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          உங்கள் குரல், எங்கள் முன்னுரிமை — Register your house and submit complaints directly to your TVK district office.
-        </p>
         {!activeHouse ? (
-          <div className="flex flex-wrap justify-center gap-3 pt-2">
+          <div className="flex flex-wrap justify-center gap-3">
             <Link to="/register">
               <Button>Register Your House</Button>
             </Link>
@@ -76,6 +74,8 @@ export default function HomePage() {
         )}
       </section>
 
+      <KolgaiLeadersSection />
+
       <section className="grid sm:grid-cols-3 gap-6">
         {features.map((feature) => (
           <Card key={feature.title} className="flex flex-col">
@@ -91,6 +91,8 @@ export default function HomePage() {
           </Card>
         ))}
       </section>
+
+      <DistrictLeaderSection />
 
       <section className="bg-tvk-black text-white rounded-xl p-8 text-center">
         <h3 className="text-xl font-bold text-tvk-gold mb-2">How It Works</h3>

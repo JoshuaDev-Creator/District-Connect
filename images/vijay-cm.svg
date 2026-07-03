@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c41e3a"/>
+      <stop offset="45%" stop-color="#ffd700"/>
+      <stop offset="55%" stop-color="#ffd700"/>
+      <stop offset="100%" stop-color="#c41e3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="600" fill="url(#bg)"/>
+  <ellipse cx="200" cy="280" rx="80" ry="100" fill="#ddd" opacity="0.3"/>
+  <text x="200" y="520" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="28" font-weight="bold">¤³ª¤¿ µ¿œ¯Í</text>
+  <text x="200" y="555" text-anchor="middle" fill="#ffd700" font-family="Arial,sans-serif" font-size="16">Thalapathy Vijay</text>
+  <text x="200" y="40" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="14" opacity="0.8">Replace with vijay-cm.jpg</text>
+</svg>

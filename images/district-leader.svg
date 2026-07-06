@@ -7,7 +7,7 @@
   </defs>
   <rect width="400" height="400" fill="url(#bg)"/>
   <circle cx="200" cy="160" r="80" fill="#ddd" opacity="0.25"/>
-  <text x="200" y="300" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="22" font-weight="bold">®¾µŸÍŸ šÆ¯²¾³°Í</text>
+  <text x="200" y="300" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="22" font-weight="bold">Â®Â¾ÂµÅ¸ÃÅ¸ Å¡Ã†Â¯Â²Â¾Â³Â°Ã</text>
   <text x="200" y="335" text-anchor="middle" fill="#ffd700" font-family="Arial,sans-serif" font-size="14">District Leader</text>
   <text x="200" y="30" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="12" opacity="0.7">Replace with district-leader.jpg</text>
 </svg>
